@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: logging-example
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: logging-example
+  template:
+    metadata:
+      labels:
+        app: logging-example
+    spec:
+      tolerations:
+      - effect: NoSchedule
+        key: node-role.kubernetes.io/control-plane
+        operator: Exists
+      - effect: NoExecute
+        key: node-role.kubernetes.io/etcd
+        operator: Exists
+      containers:
+      - name: log-generator
+        image: busybox
+        command: ["sh", "-c", "while true; do echo 'Logging example'; sleep 1; done"]
+

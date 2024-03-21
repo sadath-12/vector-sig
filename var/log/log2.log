@@ -1,0 +1,7 @@
+2024-03-14_09:22:17.555555Z  WARN service::inventory: Item not found in inventory. item_id="12345"
+2024-03-14_09:22:17.556666Z  DEBUG adapter::network: Sending request to external service. url="https://api.example.com/data"
+2024-03-14_09:22:17.557777Z  INFO processor::metrics: Processing metric update. metric_name="http_requests" value=10
+2024-03-14_09:22:17.558888Z  ERROR converter::json: Error parsing JSON data. message="Invalid character"
+2024-03-14_09:22:17.559999Z  FATAL application: Exiting due to critical error. error="Out of memory"
+2024-03-14_09:22:18.000000Z  TRACE function::calculate_average: Entering function with arguments. numbers=[1, 2, 3, 4]
+2024-03-14_09:22:18.001111Z  INFO sink::kafka: Successfully sent message to topic. topic="my-topic" message="This is a test message."

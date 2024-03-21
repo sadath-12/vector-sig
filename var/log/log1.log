@@ -1,0 +1,7 @@
+2024-03-13T18:26:15.305253Z  INFO vector::app: Log level is enabled. level="info"
+2024-03-13T18:26:15.307109Z  INFO vector::app: Loading configs. paths=["/etc/vector"]
+2024-03-13T18:26:15.311030Z  INFO vector::topology::running: Running healthchecks.
+2024-03-13T18:26:15.311163Z  INFO vector::topology::builder: Healthcheck passed.
+2024-03-13T18:26:15.311184Z  INFO vector: Vector has started. debug="false" version="0.36.1" arch="x86_64" revision="2857180 2024-03-11 14:32:52.417737479"
+2024-03-13T18:26:15.311201Z  INFO vector::app: API is disabled, enable by setting `api.enabled` to `true` and use commands like `vector top`.
+2024-03-13T18:26:15.311262Z  INFO source{component_kind="source" component_id=k8slogs component_type=file}: vector::sources::file: Starting file server. include=["/var/log/*.log"] exclude=[]

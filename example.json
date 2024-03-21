@@ -1,0 +1,56 @@
+[
+    {
+        "cache_key": "example_cache_key",
+        "component": "Cache",
+        "error": "example error occurred",
+        "level": "warning",
+        "message": "Error unmarshalling cached data for key example_cache_key",
+        "msg": "Warning message",
+        "time": "2024-03-20T15:40:58+05:30"
+    },
+    {
+        "cache_key": "example_cache_key",
+        "component": "Cache",
+        "error": "example error occurred",
+        "level": "warning",
+        "message": "Error unmarshalling cached data for key example_cache_key",
+        "msg": "Warning message",
+        "time": "2024-03-20T15:40:58+05:30"
+    },
+    {
+        "cache_key": "example_cache_key",
+        "component": "Cache",
+        "error": "example error occurred",
+        "level": "warning",
+        "message": "Error unmarshalling cached data for key example_cache_key",
+        "msg": "Warning message",
+        "time": "2024-03-20T15:40:58+05:30"
+    },
+    {
+        "cache_key": "example_cache_key",
+        "component": "Cache",
+        "error": "example error occurred",
+        "level": "warning",
+        "message": "Error unmarshalling cached data for key example_cache_key",
+        "msg": "Warning message",
+        "time": "2024-03-20T15:40:58+05:30"
+    },
+    {
+        "cache_key": "example_cache_key",
+        "component": "Cache",
+        "error": "example error occurred",
+        "level": "warning",
+        "message": "Error unmarshalling cached data for key example_cache_key",
+        "msg": "Warning message",
+        "time": "2024-03-20T15:40:58+05:30"
+    },
+    {
+        "cache_key": "example_cache_key",
+        "component": "Cache",
+        "error": "example error occurred",
+        "level": "warning",
+        "message": "Error unmarshalling cached data for key example_cache_key",
+        "msg": "Warning message",
+        "time": "2024-03-20T15:40:58+05:30"
+    }
+]

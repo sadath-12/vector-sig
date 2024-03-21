@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: logrus123
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: logrus123
+  template:
+    metadata:
+      labels:
+        app: logrus123
+    spec:
+      containers:
+        - name: logrus123
+          image: docker.io/sadath171/logrus:latest
+          ports:
+            - containerPort: 8080
+      restartPolicy: Always

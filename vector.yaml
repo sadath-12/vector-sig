@@ -1,0 +1,51 @@
+# The directory used for persisting Vector state, such as on-disk buffers, file checkpoints, and more. Please make sure the Vector project has write permissions to this directory.
+data_dir: /var/lib/vector
+
+# Sources Reference
+sources:
+  # The type: "file" will read the data from the file
+  read_from_file:
+    type: file
+    include:
+      - /Users/syedsadathulla/vector/example.json
+
+# Transforms Reference: Transform the data from Sources into desired format
+# transforms:
+#   remap_file_log:
+#     inputs:
+#       - 'read_from_file'
+#     type: 'remap'
+    # The path to the file containing the remap rules. Parsing the message which is the data read from the file.
+    # The parsed json is stored in the structured variable. The structured variable is merged with the other data/fields.
+    # source: |
+    #   structured = parse_json!(.message)
+    #   .json_msg = merge!(., structured)
+    #   del(.message)
+    #   del(.file)
+    #   del(.source_type)
+
+      
+
+  # filter_logs:
+  #   type: filter
+  #   inputs:
+  #     - 'remap_file_log'
+
+sinks:
+  siglens:
+    # The request parameters are optional.
+    type: 'elasticsearch'
+    # The inputs sources name to ingest the data. This is a list of sources. You can add multiple sources.
+    inputs:
+      - 'read_from_file'
+   
+    # The ingestion endpoint of Siglens
+    endpoints:
+      - http://34.70.18.144:8081/elastic/
+    id_key: hostname
+    compression: none
+    mode: bulk
+    query:
+      X-Powered-By: Vector
+    healthcheck:
+      enabled: false
