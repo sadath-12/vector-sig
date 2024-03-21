@@ -335,6 +335,8 @@ customConfig:
           - stream
           - time
           - file
+          - caller
+          - TraceId
 
       # The ingestion endpoint of Siglens
       endpoints:
