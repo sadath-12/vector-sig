@@ -36,7 +36,7 @@ func main() {
 	logger.SetLevel(logrus.DebugLevel)
 
 	// Bombard logs with a for loop
-	for i := 0; i < 1; i++ {
+	for i := 0; i < 100000; i++ {
 
 		// Info message with user object, shopping cart details, and performance metrics
 		user := User{ID: rand.Intn(1000) + 1, Username: fmt.Sprintf("user_%d", i/3), Email: fmt.Sprintf("user_%d@example.com", i/3)}
@@ -83,6 +83,6 @@ func main() {
 			"stack_trace": string(stack),
 		}).Error("Error message")
 
-        time.Sleep(1*time.Second)
+		time.Sleep(1 * time.Second)
 	}
 }
